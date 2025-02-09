@@ -6,20 +6,24 @@ import building from '../Pics/building.png'
 import home from '../Pics/home.png'
 import contato from '../Pics/contact.png'
 import referencias from '../Pics/references.png'
+import wapp from '../Pics/wapp.png'
 
 function Header() {
   return (
     <>
-      <header id="header">
+      <header>
         <TopLane>
-          <div id="title">
-            <a href="">
-              <img src={logo} />
-            </a>
+          <div className="title">
+            <img src={logo} />
             <h1>JDL Caldeiraria</h1>
             <span>Fabricação & Montagem</span>
           </div>
-          <button id="glass">Solicitar Orçamento</button>
+          <div className="contact">
+            <button>Solicitar Orçamento</button>
+            <span>
+              <img src={wapp} /> (44) 99942-6470
+            </span>
+          </div>
         </TopLane>
       </header>
       <DownLane>

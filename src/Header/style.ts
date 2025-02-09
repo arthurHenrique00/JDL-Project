@@ -6,45 +6,66 @@ export const TopLane = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  color: ${colors.fourth};
 
-  a {
-    text-decoration: none;
-    color: ${colors.third};
-    display: inline-block;
+  .title {
+    font-family: 'Spectral', sans-serif;
+    margin-left: 120px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 14px;
+    }
 
     img {
-      display: block;
-      width: 250px;
-      height: 150px;
+      width: 150px;
     }
   }
 
-  button {
-    height: 50px;
-    background-color: black;
-    color: ${colors.fourth};
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 2px solid ${colors.second};
-    border-top-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    transition: background-color 0.5s ease-in-out;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  .contact {
+    margin-right: 220px;
 
-    &:hover {
-      background-color: ${colors.second};
-      transform: translateY(-8px) translateX(4px);
-      box-shadow: 0px 5px 15px rggba(0, 0, 0, 0.2);
+    button {
+      display: block;
+      margin-bottom: 12px;
+      height: 50px;
+      background-color: black;
+      color: ${colors.fourth};
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 2px solid ${colors.second};
+      border-top-right-radius: 16px;
+      border-bottom-left-radius: 16px;
+      transition: background-color 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        background-color: ${colors.second};
+        transform: translateY(-8px) translateX(4px);
+        box-shadow: 0px 5px 15px rggba(0, 0, 0, 0.2);
+      }
+    }
+
+    span {
+      font-weight: bold;
+
+      img {
+      }
     }
   }
 `
 
 export const DownLane = styled.nav`
+  justify-self: center;
+
   ul {
     display: flex;
-    color: ${colors.third};
+    margin-top: 6px;
 
     li {
       display: flex;
@@ -53,10 +74,14 @@ export const DownLane = styled.nav`
       font-family: sans-serif;
       padding: 6px;
       align-items: center;
-      text-transition: transform;
+      transform: transition 0.2s ease-in-out;
+      border: 1px solid ${colors.third};
+      margin-right: 12px;
+      background: #e6e6e6;
 
       &:hover {
-        transform: 5px 5px;
+        transition: 5px 5px;
+        background: #f3f3f3;
       }
 
       img {

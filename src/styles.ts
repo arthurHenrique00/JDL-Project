@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const colors = {}
+export const colors = {
+  first: '#FF0000',
+  second: '#008000',
+  third: '#0000',
+  fourth: '#ffff'
+}
 
 const GlobalStyle = createGlobalStyle`
   * {

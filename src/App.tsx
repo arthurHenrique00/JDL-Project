@@ -1,5 +1,13 @@
+import Header from './Header/header'
+import GlobalStyle from './styles'
+
 function App() {
-  return <div>hello</div>
+  return (
+    <>
+      <Header />
+      <GlobalStyle />
+    </>
+  )
 }
 
 export default App

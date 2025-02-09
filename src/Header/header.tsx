@@ -1,11 +1,13 @@
+import { DownLane, TopLane } from './style'
+
 function Header() {
   return (
-    <header>
-      <div>
-        <img src="" />
+    <header style={{ display: 'block' }}>
+      <TopLane>
+        <img src="../Pics/JDL-logo.png" />
         <button id="glass">Solicitar Orçamento</button>
-      </div>
-      <nav>
+      </TopLane>
+      <DownLane>
         <ul>
           <li>
             Home <img src="../Pics/home.png" />{' '}
@@ -20,7 +22,7 @@ function Header() {
             Referências <img src="../Pics/references.png" />{' '}
           </li>
         </ul>
-      </nav>
+      </DownLane>
     </header>
   )
 }

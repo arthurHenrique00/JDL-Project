@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const colors = {
   first: '#FF0000',
   second: '#008000',
-  third: '#0000',
+  third: '#000',
   fourth: '#ffff'
 }
 

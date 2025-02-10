@@ -1,21 +1,29 @@
-import { Especializacao } from './style'
+import { Geral } from './style'
+
+import caldeiraria from '../Pics/caldeiraria.png'
 
 function Espec() {
   return (
-    <Especializacao>
-      <h1>Especializações nas áreas à seguir</h1>
-      <ul>
-        <li>Alimentícia</li>
-        <li>Cervejarias</li>
-        <li>Latícinios</li>
-        <li>Sucroalcooleiro</li>
-        <li>Papel Celulose</li>
-        <li>Agroindústria</li>
-        <li>Frigorífico</li>
-        <li>Thermo-Elétrica</li>
-        <li>Supervisão de montagem</li>
-      </ul>
-    </Especializacao>
+    <Geral>
+      <div className="sobre">
+        <h1 id="title">Caldeiraria</h1>
+        <img src={caldeiraria} />
+      </div>
+      <div className="especializacao">
+        <h1 id="title">Especializações nas áreas :</h1>
+        <ul>
+          <li>Alimentícia</li>
+          <li>Cervejarias</li>
+          <li>Latícinios</li>
+          <li>Sucroalcooleiro</li>
+          <li>Papel Celulose</li>
+          <li>Agroindústria</li>
+          <li>Frigoríficos</li>
+          <li>Thermo-Elétrica</li>
+          <li>Supervisão de montagem</li>
+        </ul>
+      </div>
+    </Geral>
   )
 }
 

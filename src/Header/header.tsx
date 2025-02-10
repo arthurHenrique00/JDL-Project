@@ -6,7 +6,7 @@ import building from '../Pics/building.png'
 import home from '../Pics/home.png'
 import contato from '../Pics/contact.png'
 import referencias from '../Pics/references.png'
-import wapp from '../Pics/wapp.png'
+import phone from '../Pics/phone.png'
 
 function Header() {
   return (
@@ -21,7 +21,7 @@ function Header() {
           <div className="contact">
             <button>Solicitar Orçamento</button>
             <span>
-              <img src={wapp} /> (44) 99942-6470
+              <img src={phone} /> (44) 99942-6470
             </span>
           </div>
         </TopLane>
@@ -38,7 +38,7 @@ function Header() {
             Contato <img src={contato} />{' '}
           </li>
           <li>
-            Referências <img src={referencias} />{' '}
+            Projetos <img src={referencias} />{' '}
           </li>
         </ul>
       </DownLane>

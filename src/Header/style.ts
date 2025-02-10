@@ -10,23 +10,23 @@ export const TopLane = styled.div`
 
   .title {
     font-family: 'Spectral', sans-serif;
-    margin-left: 120px;
+    margin-left: 220px;
 
     h1 {
-      font-size: 24px;
+      font-size: 16px;
     }
 
     span {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     img {
-      width: 150px;
+      width: 120px;
     }
   }
 
   .contact {
-    margin-right: 220px;
+    margin-right: 250px;
 
     button {
       display: block;
@@ -52,9 +52,11 @@ export const TopLane = styled.div`
     }
 
     span {
+      align-items: center;
       font-weight: bold;
 
       img {
+        width: 25px;
       }
     }
   }
@@ -62,6 +64,8 @@ export const TopLane = styled.div`
 
 export const DownLane = styled.nav`
   justify-self: center;
+  position: relative;
+  transform: translateY(-50%);
 
   ul {
     display: flex;
@@ -76,7 +80,6 @@ export const DownLane = styled.nav`
       align-items: center;
       transform: transition 0.2s ease-in-out;
       border: 1px solid ${colors.third};
-      margin-right: 12px;
       background: #e6e6e6;
 
       &:hover {

@@ -7,6 +7,7 @@ export const Geral = styled.div`
   grid-template-columns: repeat(2, 650px);
   justify-content: center;
   margin-top: 60px;
+  margin-bottom: 120px;
 
   #title {
     font-size: 26px;
@@ -32,7 +33,7 @@ export const Geral = styled.div`
     ul {
       display: grid;
       grid-template-columns: 150px 150px 150px;
-      gap: 32px;
+      gap: 44px;
       text-align: center;
       margin-left: 12px;
 
@@ -44,6 +45,7 @@ export const Geral = styled.div`
         background: #e6e6e6;
         border-top-right-radius: 16px;
         border-bottom-left-radius: 16px;
+        margin-bottom: 24px;
 
         &:hover {
           background: ${colors.first};

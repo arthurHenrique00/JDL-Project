@@ -42,11 +42,9 @@ export const TopLane = styled.div`
       border-top-right-radius: 16px;
       border-bottom-left-radius: 16px;
       transition: background-color 0.5s ease-in-out;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
       &:hover {
         background-color: ${colors.second};
-        transform: translateY(-8px) translateX(4px);
         box-shadow: 0px 5px 15px rggba(0, 0, 0, 0.2);
       }
     }
@@ -64,12 +62,18 @@ export const TopLane = styled.div`
 
 export const DownLane = styled.nav`
   justify-self: center;
-  position: relative;
-  transform: translateY(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); /
+  z-index: 10;
+
+  a {
+  text-decoration: none;
+  }
 
   ul {
     display: flex;
-    margin-top: 6px;
+    margin-top: 0;
 
     li {
       display: flex;
@@ -81,6 +85,7 @@ export const DownLane = styled.nav`
       transform: transition 0.2s ease-in-out;
       border: 1px solid ${colors.third};
       background: #e6e6e6;
+      color: ${colors.third};
 
       &:hover {
         transition: 5px 5px;
@@ -94,4 +99,7 @@ export const DownLane = styled.nav`
       }
     }
   }
+`
+export const BannerImage = styled.img`
+  width: 100%;
 `

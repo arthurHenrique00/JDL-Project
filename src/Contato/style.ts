@@ -41,6 +41,29 @@ export const Formulario = styled.form`
   input {
     padding: 6px;
     margin: 22px;
+    border: 2px solid ${colors.third};
+    border-radius: 9px;
+  }
+
+  textarea {
+    border: 2px solid ${colors.third};
+    border-radius: 9px;
+    resize: none;
+    padding: 6px;
+    margin: 22px;
+    height: 100px;
+  }
+
+  span {
+    border: 2px solid ${colors.first};
+    background-color: ${colors.fourth};
+    color: ${colors.first};
+    border-radius: 9px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 22px;
+    padding: 6px;
+    text-align: center;
   }
 
   button {

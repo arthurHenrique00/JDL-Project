@@ -1,4 +1,4 @@
-import { DownLane, TopLane } from './style'
+import { BannerImage, DownLane, TopLane } from './style'
 import './gradient.scss'
 
 import logo from '../Pics/JDL-logo.png'
@@ -7,8 +7,15 @@ import home from '../Pics/home.png'
 import contato from '../Pics/contact.png'
 import referencias from '../Pics/references.png'
 import phone from '../Pics/phone.png'
+import caldeiraria_banner from '../Pics/caldeiraria-bg.jpg'
 
 function Header() {
+  const phoneNumber = '5544999426470'
+
+  const handleClick = () => {
+    window.open(`https://wa.me/${phoneNumber}`, '_blank')
+  }
+
   return (
     <>
       <header>
@@ -19,7 +26,7 @@ function Header() {
             <span>Fabricação & Montagem</span>
           </div>
           <div className="contact">
-            <button>Solicitar Orçamento</button>
+            <button onClick={handleClick}>Solicitar Orçamento</button>
             <span>
               <img src={phone} /> (44) 99942-6470
             </span>
@@ -28,20 +35,29 @@ function Header() {
       </header>
       <DownLane>
         <ul>
-          <li>
-            Home <img src={home} />{' '}
-          </li>
-          <li>
-            Empresa <img src={building} />{' '}
-          </li>
-          <li>
-            Contato <img src={contato} />{' '}
-          </li>
-          <li>
-            Projetos <img src={referencias} />{' '}
-          </li>
+          <a href="">
+            <li>
+              Home <img src={home} />{' '}
+            </li>
+          </a>
+          <a href="">
+            <li>
+              Empresa <img src={building} />{' '}
+            </li>
+          </a>
+          <a href="">
+            <li>
+              Contato <img src={contato} />{' '}
+            </li>
+          </a>
+          <a href="">
+            <li>
+              Projetos <img src={referencias} />{' '}
+            </li>
+          </a>
         </ul>
       </DownLane>
+      <BannerImage src={caldeiraria_banner} />
     </>
   )
 }

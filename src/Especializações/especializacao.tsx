@@ -1,8 +1,15 @@
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { Geral } from './style'
 
 import caldeiraria from '../Pics/caldeiraria.png'
+import { useEffect } from 'react'
 
 function Espec() {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   return (
     <Geral>
       <div className="sobre">
@@ -12,15 +19,15 @@ function Espec() {
       <div className="especializacao">
         <h1 id="title">Especializações nas áreas :</h1>
         <ul>
-          <li>Alimentícia</li>
-          <li>Cervejarias</li>
-          <li>Latícinios</li>
-          <li>Sucroalcooleiro</li>
-          <li>Papel Celulose</li>
-          <li>Agroindústria</li>
-          <li>Frigoríficos</li>
-          <li>Thermo-Elétrica</li>
-          <li>Supervisão de montagem</li>
+          <li data-aos="fade-down">Alimentícia</li>
+          <li data-aos="fade-down">Cervejarias</li>
+          <li data-aos="fade-down">Latícinios</li>
+          <li data-aos="fade-down">Sucroalcooleiro</li>
+          <li data-aos="fade-down">Papel Celulose</li>
+          <li data-aos="fade-down">Agroindústria</li>
+          <li data-aos="fade-down">Frigoríficos</li>
+          <li data-aos="fade-down">Thermo-Elétrica</li>
+          <li data-aos="fade-down">Supervisão de montagem</li>
         </ul>
       </div>
     </Geral>

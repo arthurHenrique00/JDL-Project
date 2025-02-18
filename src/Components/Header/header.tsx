@@ -1,13 +1,13 @@
 import { BannerImage, DownLane, TopLane } from './style'
 import './gradient.scss'
 
-import logo from '../Pics/JDL-logo.png'
-import building from '../Pics/building.png'
-import home from '../Pics/home.png'
-import contato from '../Pics/contact.png'
-import referencias from '../Pics/references.png'
-import phone from '../Pics/phone.png'
-import caldeiraria_banner from '../Pics/caldeiraria-bg.jpg'
+import logo from '../../Pics/JDL-logo.png'
+import building from '../../Pics/building.png'
+import home from '../../Pics/home.png'
+import contato from '../../Pics/contact.png'
+import referencias from '../../Pics/references.png'
+import phone from '../../Pics/phone.png'
+import caldeiraria_banner from '../../Pics/caldeiraria-bg.jpg'
 
 function Header() {
   const phoneNumber = '5544999426470'

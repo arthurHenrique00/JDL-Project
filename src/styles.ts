@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
       font-family: Roboto, sans-serif;
       overflow-x: hidden;
+
     }
 `
 export default GlobalStyle

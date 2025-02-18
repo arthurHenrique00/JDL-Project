@@ -1,12 +1,14 @@
 import { Container } from './style'
 import Aos from 'aos'
-import 'aos/dist/aos.css'
-
-import tub_1 from '../Pics/tub-1.jpg'
-import tub_2 from '../Pics/tub-2.jpg'
-import tub_3 from '../Pics/tub-3.jpg'
-import tub_4 from '../Pics/tub-4.jpg'
 import { useEffect } from 'react'
+import 'aos/dist/aos.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+import tub_1 from '../../Pics/tub-1.jpg'
+import tub_2 from '../../Pics/tub-2.jpg'
+import tub_3 from '../../Pics/tub-3.jpg'
+import tub_4 from '../../Pics/tub-4.jpg'
 
 function Projetos() {
   useEffect(() => {

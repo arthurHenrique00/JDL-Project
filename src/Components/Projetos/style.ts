@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import background from '../Pics/caldeiraria-1.jpg'
-import { colors } from '../styles'
+import background from '../../Pics/caldeiraria-1.jpg'
+import { colors } from '../../styles'
 
 export const Container = styled.div`
   background-image: url('${background}');
@@ -8,6 +8,7 @@ export const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-bottom: 50px;
 
   h1 {
     color: ${colors.fourth};
@@ -15,21 +16,28 @@ export const Container = styled.div`
     margin: 60px;
     padding-left: 8px;
     display: inline-block;
+    background-color: transparent;
   }
 
   .projetos {
     display: flex;
-    margin-bottom: 120px;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
 
     .projeto-item {
-      margin-left: 42px;
       text-align: center;
-      width: 300px;
+      margin: 0 20px;
 
       img {
-        width: 100%;
         border-radius: 9px;
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
       }
 
       p {

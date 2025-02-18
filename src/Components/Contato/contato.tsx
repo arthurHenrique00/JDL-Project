@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import ReactInputMask from 'react-input-mask'
 import emailjs from '@emailjs/browser'
-
 import { DateLoc, Formulario } from './style'
-
-import localizacao from '../Pics/location.png'
-import clock from '../Pics/clock.png'
-import phone from '../Pics/phone-red.png'
+import localizacao from '../../Pics/location.png'
+import clock from '../../Pics/clock.png'
+import phone from '../../Pics/phone-red.png'
 
 interface FormData {
   nome: string
@@ -99,9 +97,9 @@ function Contato() {
         gap: '60px',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#e6e6e6',
         paddingTop: '32px',
-        paddingBottom: '32px'
+        paddingBottom: '32px',
+        backgroundColor: '#d6d6d6'
       }}
     >
       <DateLoc>
@@ -111,7 +109,7 @@ function Contato() {
         </div>
         <div>
           <img src={clock} />{' '}
-          <p>Horário de funcionamento: Seg - Sex das XX:XX às XX:XX</p>
+          <p>Horário de funcionamento: Seg - Sex das 07:00 às 18:00</p>
         </div>
         <div>
           <img src={phone} />

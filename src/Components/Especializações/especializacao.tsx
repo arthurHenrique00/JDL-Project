@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import Aos from 'aos'
 import Slider from 'react-slick'
 import { useGetNewsAPIQuery } from '../../services/api'
-import { useNavigate } from 'react-router-dom'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'aos/dist/aos.css'
@@ -13,8 +12,6 @@ function Espec() {
   useEffect(() => {
     Aos.init()
   }, [])
-
-  const navigate = useNavigate()
 
   const sliderRef = useRef<Slider | null>(null)
 
@@ -62,14 +59,7 @@ function Espec() {
               ) : (
                 <p>Nenhuma notícia disponível</p>
               )}
-              {articles.length > 2 && (
-                <button
-                  className="ver-mais"
-                  onClick={() => navigate('/noticias')}
-                >
-                  Ver Mais Notícias
-                </button>
-              )}
+              {articles.length > 2 && <a href="/noticias">Ver Mais Notícias</a>}
             </div>
           </div>
         )}

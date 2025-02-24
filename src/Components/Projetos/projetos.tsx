@@ -5,10 +5,10 @@ import 'aos/dist/aos.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import tub_1 from '../../Pics/tub-1.jpg'
-import tub_2 from '../../Pics/tub-2.jpg'
-import tub_3 from '../../Pics/tub-3.jpg'
-import tub_4 from '../../Pics/tub-4.jpg'
+import tub_1 from '../../Pics//2.jpg'
+import tub_2 from '../../Pics/cervejarias.jpg'
+import tub_3 from '../../Pics/dorna.jpg'
+import tub_4 from '../../Pics/laticinios.jpg'
 
 function Projetos() {
   useEffect(() => {
@@ -21,19 +21,29 @@ function Projetos() {
       <div className="projetos">
         <div data-aos="fade-left" className="projeto-item">
           <img src={tub_1} />
-          <p>Tubulação</p>
+          <div className="project-content">
+            <p className="title">lasfafafa</p>
+          </div>
         </div>
         <div data-aos="fade-left" className="projeto-item">
           <img src={tub_2} />
-          <p>Tubulação</p>
+          <div className="project-content">
+            <p className="title">Fermentação em cervejarias</p>
+          </div>
         </div>
-        <div data-aos="fade-right" className="projeto-item">
+        <div data-aos="fade-left" className="projeto-item">
           <img src={tub_3} />
-          <p>Tubulação</p>
+          <div className="project-content">
+            <p className="title">
+              Fabricação e montagem de dorna de fermentação
+            </p>
+          </div>
         </div>
-        <div data-aos="fade-right" className="projeto-item">
+        <div data-aos="fade-left" className="projeto-item">
           <img src={tub_4} />
-          <p>Tubulação</p>
+          <div className="project-content">
+            <p className="title">Fabricação de interligação em laticínios</p>
+          </div>
         </div>
       </div>
     </Container>

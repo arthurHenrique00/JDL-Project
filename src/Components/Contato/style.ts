@@ -36,22 +36,42 @@ export const Formulario = styled.form`
     font-size: 18px;
     border-left: 2px solid ${colors.third};
     padding-left: 8px;
+    padding: 12px;
   }
 
   input {
-    padding: 6px;
-    margin: 22px;
-    border: 2px solid ${colors.third};
-    border-radius: 9px;
+    font-family: 'SF Pro';
+    max-width: 300px;
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 ${colors.first};
+    outline: none;
+    transition: ease 0.25s;
+    margin: 12px;
+
+    &:focus {
+      box-shadow: 5.5px 7px 0 ${colors.first};
+    }
   }
 
   textarea {
-    border: 2px solid ${colors.third};
-    border-radius: 9px;
+    font-family: 'SF Pro';
+    max-width: 300px;
+    padding: 0.875rem;
+    font-size: 1rem;
+    border: 1.5px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 2.5px 3px 0 ${colors.first};
+    outline: none;
+    transition: ease 0.25s;
+    margin: 12px;
     resize: none;
-    padding: 6px;
-    margin: 22px;
-    height: 100px;
+
+    &:focus {
+      box-shadow: 5.5px 7px 0 ${colors.first};
+    }
   }
 
   span {
@@ -75,6 +95,7 @@ export const Formulario = styled.form`
     border-radius: 9px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    width: 300px;
 
     &:hover {
       border: 1px solid ${colors.first};

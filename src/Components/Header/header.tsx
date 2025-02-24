@@ -1,4 +1,4 @@
-import { BannerImage, DownLane, TopLane } from './style'
+import { DownLane, TopLane } from './style'
 import './gradient.scss'
 
 import logo from '../../Pics/JDL-logo.png'
@@ -6,8 +6,6 @@ import building from '../../Pics/building.png'
 import home from '../../Pics/home.png'
 import contato from '../../Pics/contact.png'
 import referencias from '../../Pics/references.png'
-import phone from '../../Pics/phone.png'
-import caldeiraria_banner from '../../Pics/caldeiraria-bg.jpg'
 
 function Header() {
   const phoneNumber = '5544999426470'
@@ -21,15 +19,16 @@ function Header() {
       <header>
         <TopLane>
           <div className="title">
-            <img src={logo} />
+            <a href="/">
+              <img src={logo} />
+            </a>
             <h1>JDL Caldeiraria</h1>
             <span>Fabricação & Montagem</span>
           </div>
           <div className="contact">
-            <button onClick={handleClick}>Solicitar Orçamento</button>
-            <span>
-              <img src={phone} /> (44) 99942-6470
-            </span>
+            <button className="btn" onClick={handleClick}>
+              Solicitar Orçamento
+            </button>
           </div>
         </TopLane>
       </header>
@@ -57,7 +56,6 @@ function Header() {
           </a>
         </ul>
       </DownLane>
-      <BannerImage src={caldeiraria_banner} />
     </>
   )
 }

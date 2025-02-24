@@ -21,31 +21,60 @@ export const Container = styled.div`
 
   .projetos {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    overflow: visible;
+  }
+
+  .projeto-item {
     position: relative;
-    width: 100%;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    cursor: pointer;
-    background-color: transparent;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 22px;
+    box-shadow: 4.5px 5px 0 ${colors.first};
 
-    .projeto-item {
-      text-align: center;
-      margin: 0 20px;
-
-      img {
-        border-radius: 9px;
-        max-width: 100%;
-        height: auto;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      p {
-        color: ${colors.fourth};
-        font-size: 26px;
-        border-bottom: 3px solid ${colors.first};
-        padding: 16px;
-      }
+    &:hover {
+      transform: rotate(-5deg) scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
+  }
+
+  .projeto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: ${colors.third};
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .projeto-item:hover .project-content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 24px;
+    color: ${colors.fourth};
+    font-weight: 700;
   }
 `

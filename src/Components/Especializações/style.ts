@@ -76,20 +76,28 @@ display: block;
               border-radius: 5px;
             }
 
-            .ver-mais {
-              font-weight: bold;
-              color: ${colors.fourth};
-              background-color: ${colors.first};
-              border: 1px solid transparent;
-              padding: 8px;
-              border-radius: 9px;
+            a {
+              background-color: #e0e0e0;
+              border-radius: 50px;
+              box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+              color: #4d4d4d;
               cursor: pointer;
-              transition: all 0.3s ease-in-out;
+              font-size: 18px;
+              padding: 15px 40px;
+              transition: all 0.2s ease-in-out;
+              border: 2px solid rgb(206, 206, 206);
+              width: 300px;
+              font-weight: bold;
+              text-decoration: none;
+              text-align: center;
 
-            &:hover {
-              border: 1px solid ${colors.first};
-              color: ${colors.first};
-              background-color: ${colors.fourth};
+              &:hover {
+                box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+              }
+
+              &:focus {
+                outline: none;
+                box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
               }
             }
           }

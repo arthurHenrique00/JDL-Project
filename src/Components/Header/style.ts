@@ -27,35 +27,99 @@ export const TopLane = styled.div`
 
   .contact {
     margin-right: 250px;
+    align-items: center;
 
-    button {
-      display: block;
-      margin-bottom: 12px;
-      height: 50px;
-      background-color: black;
-      color: ${colors.fourth};
-      font-weight: bold;
-      font-size: 16px;
-      padding: 10px 20px;
+    .btn {
+      --border-color: linear-gradient(-45deg, ${colors.third}, ${colors.first});
+      --border-width: 0.125em;
+      --curve-size: 0.5em;
+      --blur: 30px;
+      --bg: #080312;
+      --color: ${colors.fourth};
+      color: var(--color);
       cursor: pointer;
-      border: 2px solid ${colors.second};
-      border-top-right-radius: 16px;
-      border-bottom-left-radius: 16px;
-      transition: background-color 0.5s ease-in-out;
+      position: relative;
+      isolation: isolate;
+      display: inline-grid;
+      place-content: center;
+      padding: 0.5em 1.5em;
+      font-size: 17px;
+      border: 0;
+      text-transform: uppercase;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+      clip-path: polygon(
+        0% var(--curve-size),
+        var(--curve-size) 0,
+        100% 0,
+        100% calc(100% - var(--curve-size)),
+        calc(100% - var(--curve-size)) 100%,
+        0 100%
+      );
+      transition: color 250ms;
+    }
 
-      &:hover {
-        background-color: ${colors.second};
-        box-shadow: 0px 5px 15px rggba(0, 0, 0, 0.2);
+    .btn::after,
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    .btn::before {
+      background: var(--border-color);
+      background-size: 300% 300%;
+      animation: move-bg7234 5s ease infinite;
+      z-index: -2;
+    }
+
+    @keyframes move-bg7234 {
+      0% {
+        background-position: 31% 0%;
+      }
+
+      50% {
+        background-position: 70% 100%;
+      }
+
+      100% {
+        background-position: 31% 0%;
       }
     }
 
-    span {
-      align-items: center;
-      font-weight: bold;
+    .btn::after {
+      background: var(--bg);
+      z-index: -1;
+      clip-path: polygon(
+        var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+        calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width))
+          calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+          calc(100% - var(--border-width)),
+        var(--border-width) calc(100% - var(--border-width))
+      );
+      transition: clip-path 500ms;
+    }
 
-      img {
-        width: 25px;
-      }
+    .btn:where(:hover, :focus)::after {
+      clip-path: polygon(
+        calc(100% - var(--border-width))
+          calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width))
+          calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+          calc(100% - var(--border-width)),
+        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+          calc(100% - var(--border-width))
+      );
+      transition: 200ms;
+    }
+
+    .btn:where(:hover, :focus) {
+      color: #fff;
     }
   }
 `
@@ -64,11 +128,11 @@ export const DownLane = styled.nav`
   justify-self: center;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%); /
+  transform: translate(-50%, -50%);
   z-index: 10;
 
   a {
-  text-decoration: none;
+    text-decoration: none;
   }
 
   ul {

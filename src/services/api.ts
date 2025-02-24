@@ -9,6 +9,7 @@ type News = {
   image: string
   description: string
   publishedAt: Date
+  url: string
 }
 export const newsApi = createApi({
   reducerPath: 'newsApi',
@@ -17,6 +18,9 @@ export const newsApi = createApi({
     getNewsAPI: b.query<GNews, void>({
       query: () =>
         '?q=metalurgica&lang=pt&token=f097f511c45a58afe72e90aad0d390b7'
+    }),
+    getNewsFab: b.query<GNews, void>({
+      query: () => ''
     })
   })
 })

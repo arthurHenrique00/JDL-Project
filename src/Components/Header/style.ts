@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
+import header_bg from '../../Pics/header-bg-first.jpg'
 
-export const TopLane = styled.div`
+export const Cabecalho = styled.header`
+  background-image: url('${header_bg}');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,48 +127,32 @@ export const TopLane = styled.div`
       color: #fff;
     }
   }
-`
-
-export const DownLane = styled.nav`
-  justify-self: center;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-
-  a {
-    text-decoration: none;
-  }
 
   ul {
     display: flex;
-    margin-top: 0;
+    align-items: center;
 
-    li {
-      display: flex;
+    a {
+      color: ${colors.fourth};
       font-weight: bold;
-      font-size: 16px;
-      font-family: sans-serif;
+      text-decoration: none;
+      margin-left: 24px;
       padding: 6px;
-      align-items: center;
-      transform: transition 0.2s ease-in-out;
-      border: 1px solid ${colors.third};
-      background: #e6e6e6;
-      color: ${colors.third};
+      border: 2px solid transparent;
+      border-radius: 3px;
 
       &:hover {
-        transition: 5px 5px;
-        background: #f3f3f3;
+        border: 2px solid ${colors.fourth};
       }
+    }
 
-      img {
-        weight: 25px;
-        height: 25px;
-        margin-left: 10px;
-      }
+    img {
+      width: 25px;
+      margin-left: 12px;
     }
   }
 `
+
 export const BannerImage = styled.img`
   width: 100%;
 `

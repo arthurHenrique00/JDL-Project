@@ -1,5 +1,4 @@
-import { DownLane, TopLane } from './style'
-import './gradient.scss'
+import { Cabecalho } from './style'
 import logo from '../../Pics/JDL-logo.png'
 import building from '../../Pics/building.png'
 import home from '../../Pics/home.png'
@@ -15,46 +14,42 @@ function Header() {
 
   return (
     <>
-      <header>
-        <TopLane>
-          <div className="title">
-            <a href="/">
-              <img src={logo} />
-            </a>
-            <h1>JDL Caldeiraria</h1>
-            <span>Fabricação & Montagem</span>
-          </div>
-          <div className="contact">
-            <button className="btn" onClick={handleClick}>
-              Solicitar Orçamento
-            </button>
-          </div>
-        </TopLane>
-      </header>
-      <DownLane>
+      <Cabecalho>
+        <div className="title">
+          <a href="/">
+            <img src={logo} />
+          </a>
+          <h1>JDL Caldeiraria</h1>
+          <span>Fabricação & Montagem</span>
+        </div>
         <ul>
-          <a href="">
+          <a href="#home">
             <li>
               Home <img src={home} />{' '}
             </li>
           </a>
-          <a href="">
+          <a href="#empresa">
             <li>
               Empresa <img src={building} />{' '}
             </li>
           </a>
-          <a href="">
+          <a href="#contato">
             <li>
               Contato <img src={contato} />{' '}
             </li>
           </a>
-          <a href="">
+          <a href="#projetos">
             <li>
               Projetos <img src={referencias} />{' '}
             </li>
           </a>
         </ul>
-      </DownLane>
+        <div className="contact">
+          <button className="btn" onClick={handleClick}>
+            Solicitar Orçamento
+          </button>
+        </div>
+      </Cabecalho>
     </>
   )
 }

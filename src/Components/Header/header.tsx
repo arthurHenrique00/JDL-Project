@@ -1,6 +1,5 @@
 import { DownLane, TopLane } from './style'
 import './gradient.scss'
-
 import logo from '../../Pics/JDL-logo.png'
 import building from '../../Pics/building.png'
 import home from '../../Pics/home.png'

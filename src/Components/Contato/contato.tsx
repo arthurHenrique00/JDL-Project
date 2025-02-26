@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import ReactInputMask from 'react-input-mask'
 import emailjs from '@emailjs/browser'
@@ -6,7 +7,7 @@ import localizacao from '../../Pics/location.png'
 import clock from '../../Pics/clock.png'
 import phone from '../../Pics/phone-red.png'
 import 'leaflet/dist/leaflet.css'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import MiniMap from './mapa'
 
 interface FormData {
   nome: string
@@ -26,7 +27,6 @@ function Contato() {
   const [erro, setErros] = useState<Partial<FormData>>({})
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState('')
-  const position: [number, number] = [-23.4522, -51.8527]
 
   const validateForm = () => {
     const tempErros: Partial<FormData> = {}
@@ -112,18 +112,7 @@ function Contato() {
           <img src={phone} />
           <p>Telefone: (44) 99942-6470</p>
         </div>
-        <MapContainer
-          center={position}
-          zoom={13}
-          style={{ height: '400px', width: '100%' }}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={position}>
-            <Popup>
-              <span>Sarandi - PR</span>
-            </Popup>
-          </Marker>
-        </MapContainer>
+        <MiniMap latitude={-23.4522} longitude={-51.8527} />
       </DateLoc>
       <Formulario onSubmit={sendEmail}>
         <h1>Nos contate através do formulário</h1>

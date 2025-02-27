@@ -34,7 +34,11 @@ function Espec() {
 
   return (
     <Geral>
-      <div style={{ backgroundColor: '#d6d6d6' }} className="sobre">
+      <div
+        id="empresa"
+        style={{ backgroundColor: '#d6d6d6' }}
+        className="sobre"
+      >
         <div className="trailer">
           <h1 id="title">Caldeiraria</h1>
           <img src={caldeiraria} />

@@ -88,6 +88,7 @@ function Contato() {
 
   return (
     <div
+      id="contato"
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 500px)',

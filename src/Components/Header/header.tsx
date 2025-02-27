@@ -23,7 +23,7 @@ function Header() {
           <span>Fabricação & Montagem</span>
         </div>
         <ul>
-          <a href="#home">
+          <a href="/">
             <li>
               Home <img src={home} />{' '}
             </li>

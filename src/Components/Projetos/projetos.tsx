@@ -1,4 +1,10 @@
-import { Container } from './style'
+import {
+  Container,
+  ProjectCard,
+  ProjectImage,
+  ProjectItem,
+  ProjectsSection
+} from './style'
 import Aos from 'aos'
 import { useEffect } from 'react'
 import 'aos/dist/aos.css'
@@ -15,37 +21,23 @@ function Projetos() {
     Aos.init()
   }, [])
 
+  const projects = [
+    { id: 1, name: 'Projeto 1', image: `${tub_1}` },
+    { id: 2, name: 'Projeto 2', image: `${tub_2}` },
+    { id: 3, name: 'Projeto 3', image: `${tub_3}` },
+    { id: 4, name: 'Projeto 3', image: `${tub_4}` }
+  ]
+
   return (
     <Container>
-      <h1>Projetos</h1>
-      <div className="projetos">
-        <div data-aos="fade-left" className="projeto-item">
-          <img src={tub_1} />
-          <div className="project-content">
-            <p className="title">lasfafafa</p>
-          </div>
-        </div>
-        <div data-aos="fade-left" className="projeto-item">
-          <img src={tub_2} />
-          <div className="project-content">
-            <p className="title">Fermentação em cervejarias</p>
-          </div>
-        </div>
-        <div data-aos="fade-left" className="projeto-item">
-          <img src={tub_3} />
-          <div className="project-content">
-            <p className="title">
-              Fabricação e montagem de dorna de fermentação
-            </p>
-          </div>
-        </div>
-        <div data-aos="fade-left" className="projeto-item">
-          <img src={tub_4} />
-          <div className="project-content">
-            <p className="title">Fabricação de interligação em laticínios</p>
-          </div>
-        </div>
-      </div>
+      <ProjectsSection>
+        {projects.map((project) => (
+          <ProjectItem key={project.id}>
+            <ProjectImage src={project.image} alt={project.name} />
+            <ProjectCard className="project-card">{project.name}</ProjectCard>
+          </ProjectItem>
+        ))}
+      </ProjectsSection>
     </Container>
   )
 }

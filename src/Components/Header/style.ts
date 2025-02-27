@@ -137,12 +137,12 @@ export const Cabecalho = styled.header`
       font-weight: bold;
       text-decoration: none;
       margin-left: 24px;
-      padding: 6px;
-      border: 2px solid transparent;
-      border-radius: 3px;
+      padding: 3px;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 6px;
 
       &:hover {
-        border: 2px solid ${colors.fourth};
+        border-bottom: 2px solid ${colors.fourth};
       }
     }
 
